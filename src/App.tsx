@@ -10,17 +10,16 @@ function App() {
   return (
     <div className="min-h-screen">
       <Hero
-        name="Sofía"
-        backgroundImage="https://images.pexels.com/photos/1488318/pexels-photo-1488318.jpeg?auto=compress&cs=tinysrgb&w=1920"
-      />
+        name="Pablo"
+        backgroundImage="/fondohero.png"      />
       <Countdown />
       <InfoSection
-        location="Salón de Eventos Golden, Av. Principal 123"
-        locationUrl="https://maps.google.com"
-        dressCode="Elegante Sport"
+        location="Quinta Azul"
+        locationUrl="https://maps.app.goo.gl/nQsQQEEr1vJLGXcd9"
+        dressCode="Traer traje de baño y toalla"
       />
       <Gallery />
-      <Gift alias="SOFIA.FIESTA18" />
+      <Gift alias="PABLORIOS08" />
       <RSVP
         phoneNumber="5491112345678"
         message="¡Hola! Confirmo mi asistencia a la fiesta de 18"

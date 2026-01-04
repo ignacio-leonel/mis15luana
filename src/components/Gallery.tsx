@@ -1,37 +1,113 @@
+import { useState } from "react";
+
 interface GalleryProps {
   images?: string[];
 }
 
 export default function Gallery({
   images = [
-    "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1729797/pexels-photo-1729797.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1179156/pexels-photo-1179156.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1721342/pexels-photo-1721342.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/2072179/pexels-photo-2072179.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg?auto=compress&cs=tinysrgb&w=800",
-  ]
+    "/gallery/1.jpg",
+    "/gallery/2.jpg",
+    "/gallery/3.jpg",
+    "/gallery/4.jpg",
+    "/gallery/5.jpg",
+    "/gallery/6.jpg",
+    "/gallery/7.jpg",
+    "/gallery/8.jpg",
+    "/gallery/9.jpg",
+    "/gallery/10.jpg",
+    "/gallery/11.jpg",
+    "/gallery/12.jpg",
+    "/gallery/13.jpg",
+    "/gallery/14.jpg",
+    "/gallery/15.jpg",
+    "/gallery/16.jpg",
+    "/gallery/17.jpg",
+  ],
 }: GalleryProps) {
+  const [current, setCurrent] = useState(0);
+
+  const prev = () => {
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const next = () => {
+    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
   return (
-    <section className="py-16 px-6 bg-gradient-to-br from-amber-50 to-rose-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">Galería</h2>
-          <p className="text-gray-600">Momentos especiales</p>
+    <section className="py-20 px-6 bg-[#020617]">
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-2">
+            Galería
+          </h2>
+          <p className="text-slate-400">Momentos especiales</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {images.map((image, index) => (
-            <div
+        {/* Carousel */}
+        <div className="relative flex items-center justify-center">
+          {/* Imagen */}
+          <div className="w-full max-w-3xl aspect-square overflow-hidden rounded-2xl border border-sky-500/20 shadow-[0_0_40px_rgba(56,189,248,0.08)]">
+            <img
+              src={images[current]}
+              alt={`Galería ${current + 1}`}
+              className="w-full h-full object-cover transition-opacity duration-500"
+            />
+          </div>
+
+          {/* Botón izquierda */}
+          <button
+            onClick={prev}
+            className="
+              absolute
+              left-0 md:-left-16
+              p-3
+              rounded-full
+              bg-sky-500/10
+              text-sky-300
+              border border-sky-400/30
+              hover:bg-sky-500/20
+              hover:text-sky-200
+              transition
+            "
+          >
+            ◀
+          </button>
+
+          {/* Botón derecha */}
+          <button
+            onClick={next}
+            className="
+              absolute
+              right-0 md:-right-16
+              p-3
+              rounded-full
+              bg-sky-500/10
+              text-sky-300
+              border border-sky-400/30
+              hover:bg-sky-500/20
+              hover:text-sky-200
+              transition
+            "
+          >
+            ▶
+          </button>
+        </div>
+
+        {/* Indicadores */}
+        <div className="flex justify-center gap-2 mt-6">
+          {images.map((_, index) => (
+            <button
               key={index}
-              className="relative aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all hover:scale-105 duration-300"
-            >
-              <img
-                src={image}
-                alt={`Galería ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </div>
+              onClick={() => setCurrent(index)}
+              className={`h-2.5 w-2.5 rounded-full transition ${
+                index === current
+                  ? "bg-sky-400 scale-125 shadow-[0_0_10px_rgba(56,189,248,0.6)]"
+                  : "bg-slate-600 hover:bg-slate-400"
+              }`}
+            />
           ))}
         </div>
       </div>
