@@ -1,7 +1,12 @@
+/* Primero importamos la fuente */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Luego Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Animación personalizada */
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 1.5s ease-in-out;
@@ -19,6 +24,7 @@
   }
 }
 
+/* Scroll suave */
 html {
   scroll-behavior: smooth;
 }

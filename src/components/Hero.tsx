@@ -27,9 +27,15 @@ export default function Hero({
           </p>
 
           {/* Nombre en cursiva */}
-          <h1 className="text-6xl md:text-8xl italic font-bold text-sky-400">
-            {name}
-          </h1>
+         <h1
+  style={{
+    fontFamily: "'Great Vibes', cursive",
+    fontSize: "30vw", // ocupa 30% del ancho de la pantalla
+  }}
+  className="text-gray-200 mb-8"
+>
+  {name}
+</h1>
 
           {/* MIS 18 grande y cursiva */}
           <p className="text-sm md:text-lg tracking-widest uppercase text-slate-200">
