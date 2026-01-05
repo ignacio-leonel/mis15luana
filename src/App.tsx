@@ -12,7 +12,7 @@ import { MusicControl } from './components/MusicControl';
 
 function App() {
 
-  const { isPlaying, toggleMusic } = useAudio('/music/cancion.mp3');
+  const { isPlaying, toggleMusic } = useAudio('/music/cancion.mpeg');
 
   return (
     <div className="min-h-screen">
