@@ -19,23 +19,24 @@ export default function Hero({
 
       {/* Contenido */}
       <div className="relative h-full flex flex-col items-center justify-center text-center px-6">
-        <div className="space-y-4 animate-fade-in">
-          {/* Mis 18 */}
-          <p className="text-lg md:text-xl font-light tracking-widest uppercase text-slate-200">
-            ¡TE INVITO A CELEBRAR CONMIGO! <span className="text-sky-400 font-bold">18</span>
+        <div className="space-y-6 animate-fade-in">
+
+          {/* Frase */}
+          <p className="text-sm md:text-lg tracking-widest uppercase text-slate-200">
+            ¡Te invito a celebrar conmigo!
           </p>
 
-          {/* Nombre Pablo en cursiva grande */}
-          <h1 className="text-6xl md:text-8xl italic font-extrabold text-sky-400 tracking-tight">
+          {/* Nombre en cursiva */}
+          <h1 className="text-6xl md:text-8xl italic font-bold text-sky-400">
             {name}
           </h1>
 
-          {/* Divider */}
-          <div className="w-24 h-1 bg-sky-400 mx-auto"></div>
+          {/* MIS 18 grande y cursiva */}
+          <p className="text-sm md:text-lg tracking-widest uppercase text-slate-200">
+            MIS 18 AÑOS
+          </p>
 
-          {/* Invitación */}
-         
-         
+          
         </div>
       </div>
     </section>

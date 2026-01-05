@@ -5,26 +5,51 @@ import Gallery from './components/Gallery';
 import Gift from './components/Gift';
 import RSVP from './components/RSVP';
 import Footer from './components/Footer';
+import PoemSection from './components/PoemSection';
+import PoemSection2 from './components/PoemSection2';
+import { useAudio } from './hooks/useAudio';
+import { MusicControl } from './components/MusicControl';
 
 function App() {
+
+  const { isPlaying, toggleMusic } = useAudio('/music/cancion.mp3');
+
   return (
     <div className="min-h-screen">
+
+      {/* Control de música */}
+      <MusicControl 
+        isPlaying={isPlaying}
+        toggleMusic={toggleMusic}
+      />
+
       <Hero
         name="Pablo"
-        backgroundImage="/fondohero.png"      />
+        backgroundImage="/fondohero.png"
+      />
+
       <Countdown />
+
+      {/* 🌙 SECTION POEMA */}
+      <PoemSection backgroundImage="/imagen.png" />
+
       <InfoSection
         location="Quinta Azul"
         locationUrl="https://maps.app.goo.gl/nQsQQEEr1vJLGXcd9"
         dressCode="Traer traje de baño y toalla"
       />
+
       <Gallery />
       <Gift alias="PABLORIOS08" />
+
+      <PoemSection2 backgroundImage="/footerbg.png" />
+
       <RSVP
-        phoneNumber="5491112345678"
+        phoneNumber="2325516800"
         message="¡Hola! Confirmo mi asistencia a la fiesta de 18"
       />
-      <Footer name="Sofía" />
+
+      <Footer name="Pablo" />
     </div>
   );
 }
