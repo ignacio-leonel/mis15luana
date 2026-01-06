@@ -14,7 +14,7 @@ export default function RSVP({
   return (
     <section className="py-20 px-6 bg-[#020617]">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">
+        <h2 className="text-3xl md:text-4xl font text-slate-100 mb-4">
           Confirmá tu asistencia
         </h2>
 

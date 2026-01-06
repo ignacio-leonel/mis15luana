@@ -36,7 +36,7 @@ export default function Gift({ alias = "PABLORIOS08" }: GiftProps) {
           <h4
   style={{
     fontFamily: "'Great Vibes', cursive",
-    fontSize: "30vw", // ocupa 30% del ancho de la pantalla
+     // ocupa 30% del ancho de la pantalla
   }}
   className="text-gray-200 mb-8"
 >

@@ -42,19 +42,19 @@ export default function Countdown() {
   }, [targetDate]);
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-[#020617] via-[#020617] to-[#020617]">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-40 px-6 bg-gradient-to-b from-[#020617] via-[#020617] to-[#020617]">
+      <div className="max-w-8xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h3
+          <h2
   style={{
     fontFamily: "'Great Vibes', cursive",
-    fontSize: "30vw", // ocupa 30% del ancho de la pantalla
+    
   }}
   className="text-gray-200 mb-8"
 >
   ¿Cuándo?
-</h3>
+</h2>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-slate-300">
             <div className="flex items-center gap-2">

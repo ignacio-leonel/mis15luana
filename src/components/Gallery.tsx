@@ -44,7 +44,7 @@ export default function Gallery({
           <h3
   style={{
     fontFamily: "'Great Vibes', cursive",
-    fontSize: "30vw", // ocupa 30% del ancho de la pantalla
+    
   }}
   className="text-gray-200 mb-8"
 >
