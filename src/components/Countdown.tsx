@@ -42,64 +42,61 @@ export default function Countdown() {
   }, [targetDate]);
 
   return (
-    <section className="py-40 px-6 bg-gradient-to-b from-[#020617] via-[#020617] to-[#020617]">
-      <div className="max-w-8xl mx-auto">
+    <section className="py-40 px-6 bg-[#020617]">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-         <h2
-  style={{ fontFamily: "'Great Vibes', cursive" }}
-  className="
-    text-gray-200 mb-8
-    text-5xl
-    sm:text-6xl
-    md:text-7xl
-    lg:text-8xl
-    leading-tight
-  "
->
-  ¿Cuándo?
-</h2>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-slate-300">
+          <h2
+            style={{ fontFamily: "'Great Vibes', cursive" }}
+            className="
+              text-gray-200 mb-8
+              text-5xl
+              sm:text-6xl
+              md:text-7xl
+              lg:text-8xl
+              leading-tight
+              font-normal
+            "
+          >
+            ¿Cuándo?
+          </h2>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-gray-300">
             <div className="flex items-center gap-2">
-              <Calendar className="w-5 h-5 text-sky-400" />
-              <span className="text-lg font-medium">
+              <Calendar className="w-5 h-5 text-gray-400" />
+              <span className="text-lg font-normal">
                 17 de Enero, 2026
               </span>
             </div>
 
             <div className="flex items-center gap-2">
-              <Clock className="w-5 h-5 text-sky-400" />
-              <span className="text-lg font-medium">13:00 hs</span>
+              <Clock className="w-5 h-5 text-gray-400" />
+              <span className="text-lg font-normal">
+                13:00 hs
+              </span>
             </div>
           </div>
         </div>
 
         {/* Countdown */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        <div className="flex flex-wrap justify-center items-center text-gray-200">
           {[
-            { label: 'Días', value: timeLeft.days },
-            { label: 'Horas', value: timeLeft.hours },
-            { label: 'Minutos', value: timeLeft.minutes },
-            { label: 'Segundos', value: timeLeft.seconds },
-          ].map((item) => (
-            <div
-              key={item.label}
-              className="
-                bg-[#020617]/80
-                backdrop-blur
-                rounded-2xl
-                border border-sky-500/20
-                p-4 md:p-6
-                text-center
-                shadow-[0_0_40px_rgba(56,189,248,0.05)]
-              "
-            >
-              <div className="text-3xl md:text-5xl font-bold text-sky-400 mb-2">
+            { label: 'días', value: timeLeft.days },
+            { label: 'horas', value: timeLeft.hours },
+            { label: 'minutos', value: timeLeft.minutes },
+            { label: 'segundos', value: timeLeft.seconds },
+          ].map((item, index) => (
+            <div key={item.label} className="flex items-baseline">
+              <span className="text-3xl md:text-5xl font-normal">
                 {item.value.toString().padStart(2, '0')}
-              </div>
-              <div className="text-xs md:text-sm text-slate-400 uppercase tracking-wide">
+              </span>
+              <span className="ml-1 text-sm md:text-base text-gray-400">
                 {item.label}
-              </div>
+              </span>
+
+              {index < 3 && (
+                <span className="mx-3 text-gray-500">·</span>
+              )}
             </div>
           ))}
         </div>

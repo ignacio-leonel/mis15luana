@@ -6,29 +6,35 @@ interface InfoSectionProps {
   dressCode?: string;
 }
 
-<h2
-  style={{ fontFamily: "'Great Vibes', cursive" }}
-  className="
-    text-gray-200 mb-8
-    text-5xl
-    sm:text-6xl
-    md:text-7xl
-    lg:text-8xl
-    leading-tight
-  "
->
-  ¿Dónde?
-</h2>
-
 export default function InfoSection({
   location = "Salón de Eventos Golden, Av. Principal 123",
   locationUrl = "https://maps.google.com",
   dressCode = "Elegante Sport",
 }: InfoSectionProps) {
   return (
-    <section className="py-20 px-6 bg-[#020617]">
+    <section className="py-28 px-6 bg-[#020617]">
       <div className="max-w-4xl mx-auto">
+
+        {/* Título */}
+        <h2
+          style={{ fontFamily: "'Great Vibes', cursive" }}
+          className="
+            text-gray-200
+            mb-16
+            text-center
+            text-4xl
+            sm:text-5xl
+            md:text-6xl
+            lg:text-7xl
+            leading-tight
+            font-normal
+          "
+        >
+          ¿Dónde?
+        </h2>
+
         <div className="grid md:grid-cols-2 gap-8">
+
           {/* Ubicación */}
           <div
             className="
@@ -37,21 +43,20 @@ export default function InfoSection({
               rounded-2xl
               p-8
               text-center
-              border border-sky-500/20
-              shadow-[0_0_40px_rgba(56,189,248,0.05)]
-              hover:border-sky-400/40
+              border border-gray-700
+              shadow-[0_0_30px_rgba(0,0,0,0.4)]
               transition
             "
           >
-            <div className="w-16 h-16 bg-sky-500/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-sky-500/30">
-              <MapPin className="w-8 h-8 text-sky-400" />
+            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
+              <MapPin className="w-8 h-8 text-gray-300" />
             </div>
 
-            <h3 className="text-2xl text-slate-100 mb-3">
+            <h3 className="text-xl text-gray-100 mb-3 font-normal">
               Ubicación
             </h3>
 
-            <p className="text-slate-300 mb-5">
+            <p className="text-gray-400 mb-5">
               {location}
             </p>
 
@@ -63,11 +68,10 @@ export default function InfoSection({
                 inline-block
                 px-6 py-2
                 rounded-full
-                font-medium
-                text-sky-300
-                border border-sky-400/30
-                hover:bg-sky-500/10
-                hover:text-sky-200
+                text-gray-300
+                border border-gray-600
+                hover:bg-gray-800
+                hover:text-gray-200
                 transition
               "
             >
@@ -83,24 +87,24 @@ export default function InfoSection({
               rounded-2xl
               p-8
               text-center
-              border border-sky-500/20
-              shadow-[0_0_40px_rgba(56,189,248,0.05)]
-              hover:border-sky-400/40
+              border border-gray-700
+              shadow-[0_0_30px_rgba(0,0,0,0.4)]
               transition
             "
           >
-            <div className="w-16 h-16 bg-sky-500/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-sky-500/30">
-              <Shirt className="w-8 h-8 text-sky-400" />
+            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
+              <Shirt className="w-8 h-8 text-gray-300" />
             </div>
 
-            <h3 className="text-2xl text-slate-100 mb-3">
+            <h3 className="text-xl text-gray-100 mb-3 font-normal">
               Dress Code
             </h3>
 
-            <p className="text-slate-300 text-lg font-medium">
+            <p className="text-gray-400 text-lg font-normal">
               {dressCode}
             </p>
           </div>
+
         </div>
       </div>
     </section>
