@@ -79,7 +79,16 @@ export default function Countdown() {
         </div>
 
         {/* Countdown */}
-        <div className="flex flex-wrap justify-center items-center text-gray-200">
+        <div className="
+          flex
+          flex-col
+          md:flex-row
+          items-center
+          justify-center
+          gap-4
+          md:gap-6
+          text-gray-200
+        ">
           {[
             { label: 'días', value: timeLeft.days },
             { label: 'horas', value: timeLeft.hours },
@@ -90,12 +99,13 @@ export default function Countdown() {
               <span className="text-3xl md:text-5xl font-normal">
                 {item.value.toString().padStart(2, '0')}
               </span>
-              <span className="ml-1 text-sm md:text-base text-gray-400">
+              <span className="ml-2 text-sm md:text-base text-gray-400">
                 {item.label}
               </span>
 
+              {/* Separador solo en desktop */}
               {index < 3 && (
-                <span className="mx-3 text-gray-500">·</span>
+                <span className="hidden md:inline mx-4 text-gray-500">·</span>
               )}
             </div>
           ))}
