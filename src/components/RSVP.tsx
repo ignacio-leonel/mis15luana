@@ -14,9 +14,19 @@ export default function RSVP({
   return (
     <section className="py-20 px-6 bg-[#020617]">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font text-slate-100 mb-4">
-          Confirmá tu asistencia
-        </h2>
+   <h2
+  style={{ fontFamily: "'Great Vibes', cursive" }}
+  className="
+    text-gray-200 mb-8
+    text-5xl
+    sm:text-6xl
+    md:text-7xl
+    lg:text-8xl
+    leading-tight
+  "
+>
+  Confirmá tu asistencia
+</h2>
 
         <p className="text-slate-300 text-lg mb-8">
           Por favor, confirmame si vas a poder venir para poder organizar todo mejor

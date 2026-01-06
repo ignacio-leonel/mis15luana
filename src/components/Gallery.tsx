@@ -41,16 +41,19 @@ export default function Gallery({
         </div>
         {/* Header */}
         <div className="text-center mb-10">
-          <h3
-  style={{
-    fontFamily: "'Great Vibes', cursive",
-    
-  }}
-  className="text-gray-200 mb-8"
+      <h2
+  style={{ fontFamily: "'Great Vibes', cursive" }}
+  className="
+    text-gray-200 mb-8
+    text-5xl
+    sm:text-6xl
+    md:text-7xl
+    lg:text-8xl
+    leading-tight
+  "
 >
-  Galería
-</h3>
-        
+  Galería de Recuerdos
+</h2>
 
         {/* Carousel */}
         <div className="relative flex items-center justify-center">

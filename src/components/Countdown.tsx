@@ -46,16 +46,19 @@ export default function Countdown() {
       <div className="max-w-8xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2
-  style={{
-    fontFamily: "'Great Vibes', cursive",
-    
-  }}
-  className="text-gray-200 mb-8"
+         <h2
+  style={{ fontFamily: "'Great Vibes', cursive" }}
+  className="
+    text-gray-200 mb-8
+    text-5xl
+    sm:text-6xl
+    md:text-7xl
+    lg:text-8xl
+    leading-tight
+  "
 >
   ¿Cuándo?
 </h2>
-
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-slate-300">
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-sky-400" />

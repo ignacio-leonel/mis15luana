@@ -6,15 +6,19 @@ interface InfoSectionProps {
   dressCode?: string;
 }
 
-<h1
-  style={{
-    fontFamily: "'Great Vibes', cursive",
-    
-  }}
-  className="text-gray-200 mb-8"
+<h2
+  style={{ fontFamily: "'Great Vibes', cursive" }}
+  className="
+    text-gray-200 mb-8
+    text-5xl
+    sm:text-6xl
+    md:text-7xl
+    lg:text-8xl
+    leading-tight
+  "
 >
   ¿Dónde?
-</h1>
+</h2>
 
 export default function InfoSection({
   location = "Salón de Eventos Golden, Av. Principal 123",
