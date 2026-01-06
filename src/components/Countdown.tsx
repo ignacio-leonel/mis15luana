@@ -79,33 +79,40 @@ export default function Countdown() {
         </div>
 
         {/* Countdown */}
-        <div className="
-          flex
-          flex-col
-          md:flex-row
-          items-center
-          justify-center
-          gap-4
-          md:gap-6
-          text-gray-200
-        ">
+        <div
+          className="
+            flex
+            flex-row
+            items-center
+            justify-center
+            gap-3
+            md:gap-6
+            text-gray-200
+          "
+        >
           {[
-            { label: 'días', value: timeLeft.days },
-            { label: 'horas', value: timeLeft.hours },
-            { label: 'minutos', value: timeLeft.minutes },
-            { label: 'segundos', value: timeLeft.seconds },
+            { label: 'días', short: 'd', value: timeLeft.days },
+            { label: 'horas', short: 'h', value: timeLeft.hours },
+            { label: 'minutos', short: 'm', value: timeLeft.minutes },
+            { label: 'segundos', short: 's', value: timeLeft.seconds },
           ].map((item, index) => (
             <div key={item.label} className="flex items-baseline">
               <span className="text-3xl md:text-5xl font-normal">
                 {item.value.toString().padStart(2, '0')}
               </span>
-              <span className="ml-2 text-sm md:text-base text-gray-400">
+
+              {/* Mobile */}
+              <span className="ml-1 text-xs text-gray-400 md:hidden">
+                {item.short}
+              </span>
+
+              {/* Desktop */}
+              <span className="ml-2 text-sm md:text-base text-gray-400 hidden md:inline">
                 {item.label}
               </span>
 
-              {/* Separador solo en desktop */}
               {index < 3 && (
-                <span className="hidden md:inline mx-4 text-gray-500">·</span>
+                <span className="mx-2 md:mx-4 text-gray-500">·</span>
               )}
             </div>
           ))}
