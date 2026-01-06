@@ -14,7 +14,7 @@ export default function Sugerencia() {
     const encodedMessage = encodeURIComponent(message);
 
     // Número de WhatsApp del cliente en formato internacional
-    const phoneNumber = "5492325516800"; // reemplazar con el real
+    const phoneNumber = "5492273438688"; // reemplazar con el real
 
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
 
