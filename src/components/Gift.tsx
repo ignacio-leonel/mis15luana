@@ -33,7 +33,7 @@ export default function Gift({ alias = "PABLORIOS08" }: GiftProps) {
             <GiftIcon className="w-10 h-10 text-sky-400" />
           </div>
 
-          <h3
+          <h4
   style={{
     fontFamily: "'Great Vibes', cursive",
     fontSize: "30vw", // ocupa 30% del ancho de la pantalla
@@ -41,8 +41,7 @@ export default function Gift({ alias = "PABLORIOS08" }: GiftProps) {
   className="text-gray-200 mb-8"
 >
   Regalo
-</h3>
-
+</h4>
           <p className="text-slate-300 text-lg mb-6 leading-relaxed">
             Tu presencia es mi mejor regalo, pero si querés tener un detalle conmigo,
             podés hacerlo a través de este alias:

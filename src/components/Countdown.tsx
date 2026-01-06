@@ -46,7 +46,7 @@ export default function Countdown() {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2
+          <h3
   style={{
     fontFamily: "'Great Vibes', cursive",
     fontSize: "30vw", // ocupa 30% del ancho de la pantalla
@@ -54,7 +54,7 @@ export default function Countdown() {
   className="text-gray-200 mb-8"
 >
   ¿Cuándo?
-</h2>
+</h3>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-slate-300">
             <div className="flex items-center gap-2">

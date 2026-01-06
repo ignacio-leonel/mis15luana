@@ -41,7 +41,7 @@ export default function Gallery({
         </div>
         {/* Header */}
         <div className="text-center mb-10">
-          <h2
+          <h3
   style={{
     fontFamily: "'Great Vibes', cursive",
     fontSize: "30vw", // ocupa 30% del ancho de la pantalla
@@ -49,7 +49,7 @@ export default function Gallery({
   className="text-gray-200 mb-8"
 >
   Galería
-</h2>
+</h3>
         
 
         {/* Carousel */}
