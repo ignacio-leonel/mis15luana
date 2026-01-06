@@ -48,7 +48,7 @@ function App() {
       <PoemSection2 backgroundImage="/footerbg.png" />
 
       <RSVP
-        phoneNumber="2325516800"
+        phoneNumber="2273438688"
         message="¡Hola! Confirmo mi asistencia a la fiesta de 18"
       />
       
