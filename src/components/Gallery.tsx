@@ -22,6 +22,7 @@ export default function Gallery({
     "/gallery/15.jpg",
     "/gallery/16.jpg",
     "/gallery/17.jpg",
+    "/gallery/baño.jpg",
   ],
 }: GalleryProps) {
   const [current, setCurrent] = useState(0);
@@ -34,7 +35,7 @@ export default function Gallery({
     setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
-  // Array de posiciones, todas priorizan alto y derecha
+  // Array de posiciones: todas priorizan alto y derecha
   const objectPositions = images.map(() => "object-[top_right]");
 
   return (
