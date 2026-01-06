@@ -33,7 +33,7 @@ export default function InfoSection({
               <MapPin className="w-8 h-8 text-sky-400" />
             </div>
 
-            <h3 className="text-2xl font-bold text-slate-100 mb-3">
+            <h3 className="text-2xl text-slate-100 mb-3">
               Ubicación
             </h3>
 
@@ -79,7 +79,7 @@ export default function InfoSection({
               <Shirt className="w-8 h-8 text-sky-400" />
             </div>
 
-            <h3 className="text-2xl font-bold text-slate-100 mb-3">
+            <h3 className="text-2xl text-slate-100 mb-3">
               Dress Code
             </h3>
 

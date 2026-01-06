@@ -38,13 +38,19 @@ export default function Gallery({
   return (
     <section className="py-20 px-6 bg-[#020617]">
       <div className="max-w-5xl mx-auto">
+        </div>
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-2">
-            Galería
-          </h2>
-          <p className="text-slate-400">Momentos especiales</p>
-        </div>
+          <h2
+  style={{
+    fontFamily: "'Great Vibes', cursive",
+    fontSize: "30vw", // ocupa 30% del ancho de la pantalla
+  }}
+  className="text-gray-200 mb-8"
+>
+  Galería
+</h2>
+        
 
         {/* Carousel */}
         <div className="relative flex items-center justify-center">
