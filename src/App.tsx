@@ -7,6 +7,7 @@ import RSVP from './components/RSVP';
 import Footer from './components/Footer';
 import PoemSection from './components/PoemSection';
 import PoemSection2 from './components/PoemSection2';
+import Sugerencia from './components/Sugerencia';
 import { useAudio } from './hooks/useAudio';
 import { MusicControl } from './components/MusicControl';
 
@@ -42,13 +43,15 @@ function App() {
       <Gallery />
       <Gift alias="PABLORIOS08" />
 
+      <Sugerencia />
+
       <PoemSection2 backgroundImage="/footerbg.png" />
 
       <RSVP
         phoneNumber="2325516800"
         message="¡Hola! Confirmo mi asistencia a la fiesta de 18"
       />
-
+      
       <Footer name="Pablo" />
     </div>
   );

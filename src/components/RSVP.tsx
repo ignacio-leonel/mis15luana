@@ -6,7 +6,7 @@ interface RSVPProps {
 }
 
 export default function RSVP({
-  phoneNumber = "5491112345678",
+  phoneNumber = "2325516800",
   message = "¡Hola! Confirmo mi asistencia a la fiesta de 18",
 }: RSVPProps) {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

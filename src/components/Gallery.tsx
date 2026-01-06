@@ -34,25 +34,28 @@ export default function Gallery({
     setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
+  // Array de posiciones, todas priorizan alto y derecha
+  const objectPositions = images.map(() => "object-[top_right]");
+
   return (
     <section className="py-20 px-6 bg-[#020617]">
       <div className="max-w-5xl mx-auto">
-        </div>
         {/* Header */}
         <div className="text-center mb-10">
-      <h2
-  style={{ fontFamily: "'Great Vibes', cursive" }}
-  className="
-    text-gray-200 mb-8
-    text-5xl
-    sm:text-6xl
-    md:text-7xl
-    lg:text-8xl
-    leading-tight
-  "
->
-  Galería de Recuerdos
-</h2>
+          <h2
+            style={{ fontFamily: "'Great Vibes', cursive" }}
+            className="
+              text-gray-200 mb-8
+              text-5xl
+              sm:text-6xl
+              md:text-7xl
+              lg:text-8xl
+              leading-tight
+            "
+          >
+            Galería de Recuerdos
+          </h2>
+        </div>
 
         {/* Carousel */}
         <div className="relative flex items-center justify-center">
@@ -61,7 +64,7 @@ export default function Gallery({
             <img
               src={images[current]}
               alt={`Galería ${current + 1}`}
-              className="w-full h-full object-cover transition-opacity duration-500"
+              className={`w-full h-full object-cover transition-opacity duration-500 ${objectPositions[current]}`}
             />
           </div>
 
