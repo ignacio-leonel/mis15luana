@@ -47,7 +47,7 @@ export default function Countdown() {
   }, [targetDate]);
 
   return (
-    <section className="py-40 px-6 bg-[#0f1e2e]">
+    <section className="py-40 px-6 bg-[#eaf4fb]">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -56,7 +56,7 @@ export default function Countdown() {
           <h2
             style={{ fontFamily: "'Great Vibes', cursive" }}
             className="
-              text-[#a9cbe6]
+              text-[#4c86b5]
               mb-10
               text-5xl
               sm:text-6xl
@@ -69,7 +69,7 @@ export default function Countdown() {
             ¿Cuándo?
           </h2>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-[#f5f8fb]">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-[#1f2a37]">
 
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-[#d8b56a]" />
@@ -88,7 +88,7 @@ export default function Countdown() {
           </div>
         </div>
 
-        {/* Countdown container */}
+        {/* Countdown */}
         <div className="flex justify-center">
 
           <div
@@ -97,10 +97,10 @@ export default function Countdown() {
             py-8
             rounded-2xl
             border
-            border-[#4c86b5]/30
-            bg-[#0f1e2e]/60
+            border-[#cfe7f7]
+            bg-white/70
             backdrop-blur-md
-            shadow-lg
+            shadow-md
             "
           >
 
@@ -112,7 +112,7 @@ export default function Countdown() {
               justify-center
               gap-4
               md:gap-8
-              text-[#f5f8fb]
+              text-[#1f2a37]
             "
             >
 
@@ -124,7 +124,7 @@ export default function Countdown() {
               ].map((item, index) => (
                 <div key={item.label} className="flex items-baseline">
 
-                  <span className="text-4xl md:text-6xl font-light text-[#a9cbe6]">
+                  <span className="text-4xl md:text-6xl font-light text-[#4c86b5]">
                     {item.value.toString().padStart(2, '0')}
                   </span>
 

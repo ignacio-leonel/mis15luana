@@ -12,14 +12,14 @@ export default function InfoSection({
   dressCode = "Elegante Sport",
 }: InfoSectionProps) {
   return (
-    <section className="py-28 px-6 bg-[#020617]">
+    <section className="py-28 px-6 bg-[#dfeef8]">
       <div className="max-w-4xl mx-auto">
 
         {/* Título */}
         <h2
           style={{ fontFamily: "'Great Vibes', cursive" }}
           className="
-            text-gray-200
+            text-[#4c86b5]
             mb-16
             text-center
             text-4xl
@@ -33,30 +33,34 @@ export default function InfoSection({
           ¿Dónde?
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Contenedor centrado */}
+        <div className="flex justify-center">
 
           {/* Ubicación */}
           <div
             className="
-              bg-[#020617]/80
-              backdrop-blur
+              max-w-md
+              w-full
+              bg-white/70
+              backdrop-blur-md
               rounded-2xl
-              p-8
+              p-10
               text-center
-              border border-gray-700
-              shadow-[0_0_30px_rgba(0,0,0,0.4)]
+              border border-[#cfe7f7]
+              shadow-md
               transition
             "
           >
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
-              <MapPin className="w-8 h-8 text-gray-300" />
+
+            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 border border-[#cfe7f7] bg-white">
+              <MapPin className="w-8 h-8 text-[#4c86b5]" />
             </div>
 
-            <h3 className="text-xl text-gray-100 mb-3 font-normal">
+            <h3 className="text-xl text-[#1f2a37] mb-3 font-normal">
               Ubicación
             </h3>
 
-            <p className="text-gray-400 mb-5">
+            <p className="text-[#4b5563] mb-6">
               {location}
             </p>
 
@@ -68,20 +72,20 @@ export default function InfoSection({
                 inline-block
                 px-6 py-2
                 rounded-full
-                text-gray-300
-                border border-gray-600
-                hover:bg-gray-800
-                hover:text-gray-200
+                text-[#4c86b5]
+                border border-[#cfe7f7]
+                bg-white
+                hover:bg-[#cfe7f7]
                 transition
               "
             >
               Ver en mapa
             </a>
+
           </div>
 
-         
-
         </div>
+
       </div>
     </section>
   );

@@ -37,13 +37,12 @@ function App() {
       <InfoSection
         location="Salón Sociedad Española"
         locationUrl="https://maps.app.goo.gl/w4N4qvfXD3nDSg497"
-        dressCode="Traer traje de baño y toalla"
+       
       />
 
       <Gallery />
       <Gift alias="Leila.537.ceibo.mp" />
 
-      <Sugerencia />
 
       <PoemSection2 backgroundImage="/fondohero.png" />
 

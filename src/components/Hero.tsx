@@ -39,7 +39,7 @@ export default function Hero({
 
           {/* MIS 18 grande y cursiva */}
           <p className="text-sm md:text-lg tracking-widest uppercase text-slate-200">
-            MIS 18 AÑOS
+            MIS 15 AÑOS
           </p>
 
           

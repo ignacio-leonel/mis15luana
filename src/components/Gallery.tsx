@@ -10,7 +10,6 @@ export default function Gallery({
     "/gallery/luana2.jpeg",
     "/gallery/luana3.jpeg",
     "/gallery/luana4.jpeg",
-    
   ],
 }: GalleryProps) {
   const [current, setCurrent] = useState(0);
@@ -23,18 +22,19 @@ export default function Gallery({
     setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
-  // Array de posiciones: todas priorizan alto y derecha
   const objectPositions = images.map(() => "object-[top_right]");
 
   return (
-    <section className="py-20 px-6 bg-[#020617]">
+    <section className="py-24 px-6 bg-[#eaf4fb]">
       <div className="max-w-5xl mx-auto">
+
         {/* Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <h2
             style={{ fontFamily: "'Great Vibes', cursive" }}
             className="
-              text-gray-200 mb-8
+              text-[#4c86b5]
+              mb-10
               text-5xl
               sm:text-6xl
               md:text-7xl
@@ -48,8 +48,22 @@ export default function Gallery({
 
         {/* Carousel */}
         <div className="relative flex items-center justify-center">
+
           {/* Imagen */}
-          <div className="w-full max-w-3xl aspect-square overflow-hidden rounded-2xl border border-sky-500/20 shadow-[0_0_40px_rgba(56,189,248,0.08)]">
+          <div
+            className="
+            w-full
+            max-w-3xl
+            aspect-square
+            overflow-hidden
+            rounded-2xl
+            border
+            border-[#cfe7f7]
+            bg-white/70
+            backdrop-blur-md
+            shadow-md
+            "
+          >
             <img
               src={images[current]}
               alt={`Galería ${current + 1}`}
@@ -65,12 +79,12 @@ export default function Gallery({
               left-0 md:-left-16
               p-3
               rounded-full
-              bg-sky-500/10
-              text-sky-300
-              border border-sky-400/30
-              hover:bg-sky-500/20
-              hover:text-sky-200
+              bg-white/70
+              text-[#4c86b5]
+              border border-[#cfe7f7]
+              hover:bg-[#cfe7f7]
               transition
+              shadow-sm
             "
           >
             ◀
@@ -84,12 +98,12 @@ export default function Gallery({
               right-0 md:-right-16
               p-3
               rounded-full
-              bg-sky-500/10
-              text-sky-300
-              border border-sky-400/30
-              hover:bg-sky-500/20
-              hover:text-sky-200
+              bg-white/70
+              text-[#4c86b5]
+              border border-[#cfe7f7]
+              hover:bg-[#cfe7f7]
               transition
+              shadow-sm
             "
           >
             ▶
@@ -97,19 +111,20 @@ export default function Gallery({
         </div>
 
         {/* Indicadores */}
-        <div className="flex justify-center gap-2 mt-6">
+        <div className="flex justify-center gap-3 mt-8">
           {images.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrent(index)}
-              className={`h-2.5 w-2.5 rounded-full transition ${
+              className={`h-3 w-3 rounded-full transition ${
                 index === current
-                  ? "bg-sky-400 scale-125 shadow-[0_0_10px_rgba(56,189,248,0.6)]"
-                  : "bg-slate-600 hover:bg-slate-400"
+                  ? "bg-[#d8b56a] scale-125 shadow-[0_0_10px_rgba(216,181,106,0.6)]"
+                  : "bg-[#cfe7f7] hover:bg-[#4c86b5]"
               }`}
             />
           ))}
         </div>
+
       </div>
     </section>
   );

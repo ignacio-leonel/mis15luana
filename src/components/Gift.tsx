@@ -15,38 +15,42 @@ export default function Gift({ alias = "Leila.537.ceibo.mp" }: GiftProps) {
   };
 
   return (
-    <section className="py-20 px-6 bg-[#020617]">
+    <section className="py-24 px-6 bg-[#dfeef8]">
       <div className="max-w-2xl mx-auto">
+
         <div
           className="
-            bg-[#020617]/80
-            backdrop-blur
+            bg-white/70
+            backdrop-blur-md
             rounded-2xl
             p-8 md:p-12
             text-center
-            border border-sky-500/20
-            shadow-[0_0_40px_rgba(56,189,248,0.05)]
+            border border-[#cfe7f7]
+            shadow-md
           "
         >
+
           {/* Icon */}
-          <div className="w-20 h-20 bg-sky-500/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-sky-500/30">
-            <GiftIcon className="w-10 h-10 text-sky-400" />
+          <div className="w-20 h-20 bg-[#cfe7f7] rounded-full flex items-center justify-center mx-auto mb-6 border border-[#cfe7f7]">
+            <GiftIcon className="w-10 h-10 text-[#4c86b5]" />
           </div>
 
-    <h2
-  style={{ fontFamily: "'Great Vibes', cursive" }}
-  className="
-    text-gray-200 mb-8
-    text-5xl
-    sm:text-6xl
-    md:text-7xl
-    lg:text-8xl
-    leading-tight
-  "
->
-  Regalo
-</h2>
-          <p className="text-slate-300 text-lg mb-6 leading-relaxed">
+          <h2
+            style={{ fontFamily: "'Great Vibes', cursive" }}
+            className="
+              text-[#4c86b5]
+              mb-8
+              text-5xl
+              sm:text-6xl
+              md:text-7xl
+              lg:text-8xl
+              leading-tight
+            "
+          >
+            Regalo
+          </h2>
+
+          <p className="text-[#4b5563] text-lg mb-8 leading-relaxed">
             Tu presencia es mi mejor regalo, pero si querés tener un detalle conmigo,
             podés hacerlo a través de este alias:
           </p>
@@ -57,14 +61,17 @@ export default function Gift({ alias = "Leila.537.ceibo.mp" }: GiftProps) {
               inline-flex
               items-center
               gap-3
-              px-5 py-3
+              px-6
+              py-3
               rounded-xl
-              bg-sky-500/5
-              border border-sky-400/30
+              bg-white
+              border border-[#cfe7f7]
               mb-4
+              shadow-sm
             "
           >
-            <span className="text-xl md:text-2xl font-bold text-sky-400">
+
+            <span className="text-xl md:text-2xl font-semibold text-[#4c86b5]">
               {alias}
             </span>
 
@@ -73,21 +80,24 @@ export default function Gift({ alias = "Leila.537.ceibo.mp" }: GiftProps) {
               className="
                 p-2
                 rounded-lg
-                hover:bg-sky-500/10
+                hover:bg-[#cfe7f7]
                 transition
               "
               title="Copiar alias"
             >
-              <Copy className="w-5 h-5 text-slate-300" />
+              <Copy className="w-5 h-5 text-[#4c86b5]" />
             </button>
+
           </div>
 
           {copied && (
-            <p className="text-sky-400 font-medium animate-fade-in">
+            <p className="text-[#d8b56a] font-medium">
               ¡Alias copiado!
             </p>
           )}
+
         </div>
+
       </div>
     </section>
   );
