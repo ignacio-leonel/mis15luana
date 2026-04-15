@@ -79,31 +79,7 @@ export default function InfoSection({
             </a>
           </div>
 
-          {/* Dress Code */}
-          <div
-            className="
-              bg-[#020617]/80
-              backdrop-blur
-              rounded-2xl
-              p-8
-              text-center
-              border border-gray-700
-              shadow-[0_0_30px_rgba(0,0,0,0.4)]
-              transition
-            "
-          >
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
-              <Shirt className="w-8 h-8 text-gray-300" />
-            </div>
-
-            <h3 className="text-xl text-gray-100 mb-3 font-normal">
-              Dress Code
-            </h3>
-
-            <p className="text-gray-400 text-lg font-normal">
-              {dressCode}
-            </p>
-          </div>
+         
 
         </div>
       </div>

@@ -4,7 +4,7 @@ interface FooterProps {
   name?: string;
 }
 
-export default function Footer({ name = "Sofía" }: FooterProps) {
+export default function Footer({ name = "Leila" }: FooterProps) {
   return (
     <footer
       className="
@@ -16,7 +16,7 @@ export default function Footer({ name = "Sofía" }: FooterProps) {
         bg-center
         bg-no-repeat
       "
-      style={{ backgroundImage: "url('/footerbg.png')" }}
+      style={{ backgroundImage: "url('/fondohero.png')" }}
     >
       {/* Overlay oscuro */}
       <div className="absolute inset-0 bg-[#020617]/80" />

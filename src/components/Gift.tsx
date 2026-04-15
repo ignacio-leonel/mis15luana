@@ -5,7 +5,7 @@ interface GiftProps {
   alias?: string;
 }
 
-export default function Gift({ alias = "PABLORIOS08" }: GiftProps) {
+export default function Gift({ alias = "Leila.537.ceibo.mp" }: GiftProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {

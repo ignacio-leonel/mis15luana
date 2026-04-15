@@ -16,12 +16,7 @@ export default function PoemSection({
       {/* Contenido */}
       <div className="relative z-10 max-w-3xl px-6 text-center text-white">
   <p className="text-xl md:text-2xl italic leading-relaxed font-light">
-    Hoy no solo se celebran 18 años,<br />
-    se celebra la vida,<br />
-    las experiencias<br />
-    y la presencia de quienes<br />
-    hacen de este día<br />
-    algo verdaderamente especial.
+    “La vida está hecha de momentos especiales, y este es uno de los más importantes para mí. Acompañame a celebrarlo.”
   </p>
 </div>
 

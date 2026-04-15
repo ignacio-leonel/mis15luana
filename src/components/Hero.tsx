@@ -4,7 +4,7 @@ interface HeroProps {
 }
 
 export default function Hero({
-  name = "Pablo",
+  name = "Leila",
   backgroundImage = "/fondohero.png",
 }: HeroProps) {
   return (

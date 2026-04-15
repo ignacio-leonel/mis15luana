@@ -25,34 +25,34 @@ function App() {
       />
 
       <Hero
-        name="Pablo"
+        name="Leila"
         backgroundImage="/fondohero.png"
       />
 
       <Countdown />
 
       {/* 🌙 SECTION POEMA */}
-      <PoemSection backgroundImage="/imagen.png" />
+      <PoemSection backgroundImage="/fondohero.png" />
 
       <InfoSection
-        location="Quinta Azul"
-        locationUrl="https://maps.app.goo.gl/nQsQQEEr1vJLGXcd9"
+        location="Salón Sociedad Española"
+        locationUrl="https://maps.app.goo.gl/w4N4qvfXD3nDSg497"
         dressCode="Traer traje de baño y toalla"
       />
 
       <Gallery />
-      <Gift alias="PABLORIOS08" />
+      <Gift alias="Leila.537.ceibo.mp" />
 
       <Sugerencia />
 
-      <PoemSection2 backgroundImage="/footerbg.png" />
+      <PoemSection2 backgroundImage="/fondohero.png" />
 
       <RSVP
-        phoneNumber="2273438688"
-        message="¡Hola! Confirmo mi asistencia a la fiesta de 18"
+        phoneNumber="2273426386"
+        message="¡Hola! Confirmo mi asistencia a la fiesta de 15"
       />
       
-      <Footer name="Pablo" />
+      <Footer name="Leila" />
     </div>
   );
 }
