@@ -35,6 +35,7 @@ export default function Gift({ alias = "Leila.537.ceibo.mp" }: GiftProps) {
             <GiftIcon className="w-10 h-10 text-[#4c86b5]" />
           </div>
 
+          {/* Título */}
           <h2
             style={{ fontFamily: "'Great Vibes', cursive" }}
             className="
@@ -68,10 +69,10 @@ export default function Gift({ alias = "Leila.537.ceibo.mp" }: GiftProps) {
               border border-[#cfe7f7]
               mb-4
               shadow-sm
+              max-w-full
             "
           >
-
-            <span className="text-xl md:text-2xl font-semibold text-[#4c86b5]">
+            <span className="text-lg md:text-xl font-semibold text-[#4c86b5] break-all">
               {alias}
             </span>
 
@@ -87,7 +88,6 @@ export default function Gift({ alias = "Leila.537.ceibo.mp" }: GiftProps) {
             >
               <Copy className="w-5 h-5 text-[#4c86b5]" />
             </button>
-
           </div>
 
           {copied && (

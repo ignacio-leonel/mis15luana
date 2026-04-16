@@ -47,17 +47,17 @@ export default function Countdown() {
   }, [targetDate]);
 
   return (
-    <section className="py-40 px-6 bg-[#eaf4fb]">
+    <section className="py-32 px-6 bg-[#eaf4fb]">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-12">
 
           <h2
             style={{ fontFamily: "'Great Vibes', cursive" }}
             className="
               text-[#4c86b5]
-              mb-10
+              mb-8
               text-5xl
               sm:text-6xl
               md:text-7xl
@@ -93,27 +93,30 @@ export default function Countdown() {
 
           <div
             className="
-            px-10
-            py-8
-            rounded-2xl
-            border
-            border-[#cfe7f7]
-            bg-white/70
-            backdrop-blur-md
-            shadow-md
+              w-full
+              max-w-xl
+              px-5
+              py-6
+              md:px-10
+              md:py-8
+              rounded-2xl
+              border
+              border-[#cfe7f7]
+              bg-white/70
+              backdrop-blur-md
+              shadow-md
             "
           >
 
             <div
               className="
-              flex
-              flex-row
-              items-center
-              justify-center
-              gap-4
-              md:gap-8
-              text-[#1f2a37]
-            "
+                flex
+                flex-wrap
+                justify-center
+                gap-4
+                md:gap-8
+                text-[#1f2a37]
+              "
             >
 
               {[
@@ -124,7 +127,7 @@ export default function Countdown() {
               ].map((item, index) => (
                 <div key={item.label} className="flex items-baseline">
 
-                  <span className="text-4xl md:text-6xl font-light text-[#4c86b5]">
+                  <span className="text-3xl md:text-6xl font-light text-[#4c86b5]">
                     {item.value.toString().padStart(2, '0')}
                   </span>
 
@@ -139,7 +142,7 @@ export default function Countdown() {
                   </span>
 
                   {index < 3 && (
-                    <span className="mx-3 md:mx-6 text-[#4c86b5]">
+                    <span className="mx-2 md:mx-6 text-[#4c86b5]">
                       ·
                     </span>
                   )}
