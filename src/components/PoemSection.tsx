@@ -15,11 +15,13 @@ export default function PoemSection({
 
       {/* Contenido */}
       <div className="relative z-10 max-w-3xl px-6 text-center text-white">
-  <p className="text-xl md:text-2xl italic leading-relaxed font-light">
-    “La vida está hecha de momentos especiales, y este es uno de los más importantes para mí. Acompañame a celebrarlo.”
-  </p>
-</div>
-
+        <p
+          style={{ fontFamily: "'Montserrat', sans-serif" }}
+          className="text-xl md:text-2xl leading-relaxed font-light tracking-wide"
+        >
+          “La vida está hecha de momentos especiales, y este es uno de los más importantes para mí. Acompañame a celebrarlo.”
+        </p>
+      </div>
     </section>
   );
 }
