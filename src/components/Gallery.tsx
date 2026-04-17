@@ -10,6 +10,7 @@ export default function Gallery({
     "/gallery/luana2.jpeg",
     "/gallery/luana3.jpeg",
     "/gallery/luana4.jpeg",
+    "/gallery/luana5.jpeg"
   ],
 }: GalleryProps) {
   const [current, setCurrent] = useState(0);
